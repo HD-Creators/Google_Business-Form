@@ -1,0 +1,43 @@
+# ============================================================
+# ROBOTS.TXT — HD Creators (https://hdcreators.in/)
+# ============================================================
+# This file tells search engine crawlers which pages to index.
+#
+# HOW TO USE:
+# 1. Upload this file to your website root: https://hdcreators.in/robots.txt
+# 2. Verify it is accessible at that URL
+# 3. In Google Search Console → Settings → Robots.txt Tester — confirm it works
+# ============================================================
+
+# Allow all major search engine bots to crawl the entire site
+User-agent: *
+Allow: /
+
+# Block access to any admin, private or system folders (add as needed)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /cgi-bin/
+
+# Sitemap location — Google and Bing will find and index it automatically
+Sitemap: https://hdcreators.in/sitemap.xml
+
+# ============================================================
+# OPTIONAL: Specific rules for individual bots
+# Uncomment if you want to control crawl rate for Googlebot
+# ============================================================
+# User-agent: Googlebot
+# Allow: /
+# Crawl-delay: 1
+
+# Disallow AI training scrapers (optional but recommended)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
