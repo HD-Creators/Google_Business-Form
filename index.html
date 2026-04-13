@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HD Creators | Website Development in Chennai &amp; Madambakkam</title>
+<meta name="description" content="HD Creators offers professional website development in Chennai, Madambakkam and across Tamil Nadu. Get a business website, e-commerce store, or portfolio — affordable web design tailored for local businesses.">
+<meta name="keywords" content="website development Chennai, web design Madambakkam, business website Tamil Nadu, website design Chennai, affordable web design, HD Creators, website enquiry, e-commerce website Chennai, portfolio website">
+<meta name="author" content="HD Creators">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hdcreators.in/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="HD Creators | Website Development in Chennai &amp; Madambakkam">
+<meta property="og:description" content="Transform your business with a powerful website. HD Creators specialises in business websites, e-commerce and portfolios for companies across Chennai and Tamil Nadu.">
+<meta property="og:url" content="https://hdcreators.in/">
+<meta property="og:site_name" content="HD Creators">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HD Creators | Website Development in Chennai">
+<meta name="twitter:description" content="Professional web design &amp; development in Madambakkam, Chennai. Contact us to build your dream website today.">
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "HD Creators",
+  "description": "Professional website development and web design services in Chennai and Madambakkam, Tamil Nadu. Specialising in business websites, e-commerce, and portfolio sites.",
+  "url": "https://hdcreators.in/",
+  "telephone": "+91-7358494779",
+  "email": "hdcreator18@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Madambakkam",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN",
+    "addressCity": "Chennai"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.9101,
+    "longitude": 80.1947
+  },
+  "areaServed": ["Chennai", "Madambakkam", "Tamil Nadu"],
+  "serviceType": ["Website Development", "Web Design", "E-Commerce Development", "Business Website", "Portfolio Website"],
+  "priceRange": "₹₹",
+  "openingHours": "Mo-Sa 09:00-20:00",
+  "sameAs": []
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg: #0a0f1e;
+    --surface: rgba(255,255,255,0.04);
+    --surface-hover: rgba(255,255,255,0.07);
+    --border: rgba(255,255,255,0.09);
+    --border-focus: rgba(99,179,237,0.6);
+    --accent: #63b3ed;
+    --accent2: #9f7aea;
+    --accent3: #68d391;
+    --gold: #f6c90e;
+    --text: #e8eaf0;
+    --text-muted: #8892a4;
+    --error: #fc8181;
+    --success: #68d391;
+    --card-glow: rgba(99,179,237,0.07);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Sora', 'Noto Sans Tamil', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* Background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 10%, rgba(99,179,237,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(159,122,234,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 50% 50%, rgba(104,211,145,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeDown 0.7s ease both;
+  }
+
+  .brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(99,179,237,0.12);
+    border: 1px solid rgba(99,179,237,0.25);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  .brand-badge .dot {
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+  }
+
+  h1 {
+    font-size: clamp(26px, 5vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  h1 .line1 { display: block; color: var(--text); }
+  h1 .line2 { display: block; color: var(--accent); }
+  h1 .line3 { display: block; font-size: 0.65em; color: var(--text-muted); font-weight: 400; margin-top: 4px; }
+
+  .header-caption {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 10px auto 4px;
+    max-width: 520px;
+    letter-spacing: -0.1px;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 14px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* Location field wrapper */
+  .location-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .location-input-wrap input {
+    flex: 1;
+  }
+
+  .locate-btn {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 12px;
+    height: 44px;
+    background: rgba(99,179,237,0.1);
+    border: 1px solid rgba(99,179,237,0.28);
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+  }
+
+  .locate-btn:hover {
+    background: rgba(99,179,237,0.18);
+    border-color: rgba(99,179,237,0.5);
+  }
+
+  .locate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .locate-btn .loc-icon { font-size: 14px; }
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 24px auto 36px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .lang-btn-group {
+    display: inline-flex;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 4px;
+    gap: 4px;
+  }
+
+  .lang-btn {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 100px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-muted);
+    background: transparent;
+    letter-spacing: 0.3px;
+  }
+
+  .lang-btn.active {
+    background: var(--accent);
+    color: #0a0f1e;
+    box-shadow: 0 4px 16px rgba(99,179,237,0.35);
+  }
+
+  /* Progress */
+  .progress-bar-outer {
+    height: 3px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 100px;
+    margin-bottom: 36px;
+    overflow: hidden;
+    animation: fadeIn 1s ease both;
+  }
+
+  .progress-bar-inner {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border-radius: 100px;
+    width: 0%;
+    transition: width 0.5s ease;
+  }
+
+  .progress-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 6px;
+    margin-bottom: 28px;
+  }
+
+  /* Section Cards */
+  .section-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px 28px 24px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: border-color var(--transition), box-shadow var(--transition);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .section-card:hover {
+    border-color: rgba(99,179,237,0.2);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .section-icon.blue { background: rgba(99,179,237,0.15); }
+  .section-icon.purple { background: rgba(159,122,234,0.15); }
+  .section-icon.green { background: rgba(104,211,145,0.15); }
+  .section-icon.gold { background: rgba(246,201,14,0.15); }
+  .section-icon.pink { background: rgba(245,101,101,0.15); }
+  .section-icon.teal { background: rgba(56,178,172,0.15); }
+
+  .section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.2px;
+  }
+
+  .section-title .tamil {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-top: 1px;
+  }
+
+  /* Field Grid */
+  .field-grid {
+    display: grid;
+    gap: 18px;
+  }
+
+  .field-grid.cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 560px) {
+    .field-grid.cols-2 { grid-template-columns: 1fr; }
+    .section-card { padding: 20px 16px; }
+    .wrapper { padding: 24px 14px 60px; }
+  }
+
+  /* Form Fields */
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .field.full { grid-column: 1 / -1; }
+
+  label {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  label .required-star {
+    color: var(--error);
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  label .optional-tag {
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(136,146,164,0.6);
+    background: rgba(255,255,255,0.04);
+    padding: 1px 7px;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  input, textarea, select {
+    background: rgba(255,255,255,0.035);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+    transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: rgba(136,146,164,0.5);
+    font-size: 13px;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: var(--border-focus);
+    background: rgba(99,179,237,0.05);
+    box-shadow: 0 0 0 3px rgba(99,179,237,0.1);
+  }
+
+  input.error, textarea.error, select.error {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(252,129,129,0.1);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.6;
+  }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238892a4' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+
+  select option { background: #1a2035; color: var(--text); }
+
+  .error-msg {
+    font-size: 11.5px;
+    color: var(--error);
+    display: none;
+    align-items: center;
+    gap: 4px;
+    animation: shake 0.3s ease;
+  }
+
+  .error-msg.show { display: flex; }
+
+  /* Radio & Checkbox Groups */
+  .radio-group, .check-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 2px;
+  }
+
+  .radio-chip, .check-chip {
+    position: relative;
+  }
+
+  .radio-chip input, .check-chip input {
+    position: absolute;
+    opacity: 0;
+    width: 0; height: 0;
+  }
+
+  .radio-chip label, .check-chip label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.03);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: var(--transition);
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .radio-chip input:checked + label,
+  .check-chip input:checked + label {
+    background: rgba(99,179,237,0.12);
+    border-color: rgba(99,179,237,0.4);
+    color: var(--accent);
+    box-shadow: 0 2px 10px rgba(99,179,237,0.15);
+  }
+
+  .radio-chip label:hover,
+  .check-chip label:hover {
+    border-color: rgba(99,179,237,0.3);
+    color: var(--text);
+  }
+
+  /* Service Level Cards */
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 480px) {
+    .service-cards { grid-template-columns: 1fr; }
+  }
+
+  .service-card-option { position: relative; }
+  .service-card-option input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+  .service-card-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 18px 12px;
+    border-radius: 14px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.03);
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card-label::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .service-card-option:nth-child(1) .service-card-label::before { background: linear-gradient(135deg, rgba(104,211,145,0.08), transparent); }
+  .service-card-option:nth-child(2) .service-card-label::before { background: linear-gradient(135deg, rgba(99,179,237,0.08), transparent); }
+  .service-card-option:nth-child(3) .service-card-label::before { background: linear-gradient(135deg, rgba(246,201,14,0.08), transparent); }
+
+  .service-card-option:nth-child(1) input:checked + .service-card-label { border-color: var(--accent3); box-shadow: 0 4px 20px rgba(104,211,145,0.2); }
+  .service-card-option:nth-child(2) input:checked + .service-card-label { border-color: var(--accent); box-shadow: 0 4px 20px rgba(99,179,237,0.2); }
+  .service-card-option:nth-child(3) input:checked + .service-card-label { border-color: var(--gold); box-shadow: 0 4px 20px rgba(246,201,14,0.2); }
+
+  .service-card-option input:checked + .service-card-label::before { opacity: 1; }
+
+  .service-card-label:hover { border-color: rgba(255,255,255,0.18); transform: translateY(-2px); }
+
+  .service-emoji { font-size: 24px; line-height: 1; }
+
+  .service-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+  }
+
+  .service-tamil {
+    font-size: 11px;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .service-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-weight: 600;
+  }
+
+  .badge-green { background: rgba(104,211,145,0.15); color: var(--accent3); }
+  .badge-blue { background: rgba(99,179,237,0.15); color: var(--accent); }
+  .badge-gold { background: rgba(246,201,14,0.15); color: var(--gold); }
+
+  /* File Upload */
+  .file-upload-area {
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .file-upload-area:hover, .file-upload-area.drag-over {
+    border-color: rgba(99,179,237,0.4);
+    background: rgba(99,179,237,0.04);
+  }
+
+  .file-upload-area input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .upload-icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: rgba(99,179,237,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 12px;
+  }
+
+  .upload-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .upload-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .upload-subtitle span { color: var(--accent); font-weight: 600; }
+
+  .file-list {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .file-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .file-item-icon { font-size: 18px; flex-shrink: 0; }
+
+  .file-item-info { flex: 1; min-width: 0; }
+
+  .file-item-name {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .file-item-size { font-size: 11px; color: var(--text-muted); }
+
+  .file-remove {
+    background: rgba(252,129,129,0.1);
+    border: none;
+    color: var(--error);
+    width: 24px; height: 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+  }
+
+  .file-remove:hover { background: rgba(252,129,129,0.2); }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .preview-item {
+    aspect-ratio: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .preview-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .preview-item .video-thumb {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    color: var(--text-muted);
+  }
+
+  /* Submit Area */
+  .submit-area {
+    margin-top: 28px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .submit-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .btn-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  @media (max-width: 480px) {
+    .btn-row { grid-template-columns: 1fr; }
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 24px;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0);
+    transition: var(--transition);
+  }
+
+  .btn:hover::after { background: rgba(255,255,255,0.07); }
+  .btn:active { transform: scale(0.98); }
+
+  .btn-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.3);
+  }
+
+  .btn-whatsapp:hover { box-shadow: 0 8px 32px rgba(37,211,102,0.45); transform: translateY(-2px); }
+
+  .btn-email {
+    background: rgba(99,179,237,0.12);
+    color: var(--accent);
+    border: 1.5px solid rgba(99,179,237,0.3);
+  }
+
+  .btn-email:hover { background: rgba(99,179,237,0.18); transform: translateY(-2px); }
+
+  .btn-icon { font-size: 18px; }
+
+  .btn-text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
+  .btn-text .main { font-size: 14px; }
+  .btn-text .sub { font-size: 11px; font-weight: 400; opacity: 0.8; }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(20,30,50,0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 9999;
+    transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    max-width: 90vw;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  .toast.success { border-color: rgba(104,211,145,0.4); color: var(--success); }
+  .toast.error { border-color: rgba(252,129,129,0.4); color: var(--error); }
+
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 6px 0 18px;
+    color: var(--text-muted);
+    font-size: 11px;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Animations */
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+
+  .section-card:nth-child(1) { animation-delay: 0.05s; }
+  .section-card:nth-child(2) { animation-delay: 0.1s; }
+  .section-card:nth-child(3) { animation-delay: 0.15s; }
+  .section-card:nth-child(4) { animation-delay: 0.2s; }
+  .section-card:nth-child(5) { animation-delay: 0.25s; }
+  .section-card:nth-child(6) { animation-delay: 0.3s; }
+  .section-card:nth-child(7) { animation-delay: 0.35s; }
+
+  /* Tamil mode */
+  body.tamil-mode input::placeholder,
+  body.tamil-mode textarea::placeholder { font-size: 12px; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 100px; }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="brand-badge"><span class="dot"></span> HD Creators</div>
+    <h1 itemprop="name">
+      <span class="line1">HD Creators</span>
+      <span class="line2">Website Enquiry Form</span>
+    </h1>
+    <p class="header-caption" id="headerCaption">Transforming Your Business into a Powerful Online Presence 🚀</p>
+    <p class="subtitle" id="headerSubtitle">Professional website development in Chennai &amp; Madambakkam — tell us about your business and we'll craft the perfect website for you.</p>
+  </header>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <div class="lang-btn-group">
+      <button class="lang-btn active" onclick="setLang('en')" id="btnEn">🇬🇧 English</button>
+      <button class="lang-btn" onclick="setLang('ta')" id="btnTa">🇮🇳 தமிழ்</button>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-bar-outer" role="progressbar" aria-label="Form completion progress">
+    <div class="progress-bar-inner" id="progressBar"></div>
+  </div>
+  <div class="progress-label" id="progressLabel">0% complete</div>
+
+  <main>
+  <form id="enquiryForm" novalidate aria-label="Website Enquiry Form">
+
+    <!-- SECTION 1: Business Info -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon blue">🏢</div>
+        <div class="section-title">
+          <h2 style="font:inherit;display:inline">Business Information</h2>
+          <span class="tamil" id="sec1Tamil">வணிக தகவல்கள்</span>
+        </div>
+      </div>
+      <div class="field-grid cols-2">
+
+        <div class="field">
+          <label for="bizName">
+            <span id="lbl_bizName">Business Name</span>
+            <span class="required-star">*</span>
+          </label>
+          <input type="text" id="bizName" placeholder="e.g. Sri Murugan Bakery" required>
+          <span class="error-msg" id="err_bizName">⚠ <span id="errtxt_bizName">Business name is required</span></span>
+        </div>
+
+        <div class="field">
+          <label for="bizType">
+            <span id="lbl_bizType">Business Type</span>
+            <span class="required-star">*</span>
+          </label>
+          <input type="text" id="bizType" placeholder="e.g. Bakery, Tailoring, School" required>
+          <span class="error-msg" id="err_bizType">⚠ <span id="errtxt_bizType">Business type is required</span></span>
+        </div>
+
+        <div class="field">
+          <label for="location"><span id="lbl_location">Location</span></label>
+          <div class="location-input-wrap">
+            <input type="text" id="location" value="Madambakkam">
+            <button type="button" class="locate-btn" id="locateBtn" onclick="detectLocation()">
+              <span class="loc-icon">📍</span>
+              <span id="locateBtnText">Detect</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="phone">
+            <span id="lbl_phone">Phone Number</span>
+            <span class="required-star">*</span>
+          </label>
+          <input type="tel" id="phone" placeholder="e.g. +91 98765 43210" required>
+          <span class="error-msg" id="err_phone">⚠ <span id="errtxt_phone">Valid phone number is required</span></span>
+        </div>
+
+        <div class="field full">
+          <label for="email">
+            <span id="lbl_email">Email Address</span>
+            <span class="optional-tag" id="optTag1">Optional</span>
+          </label>
+          <input type="email" id="email" placeholder="e.g. business@email.com">
+          <span class="error-msg" id="err_email">⚠ <span id="errtxt_email">Enter a valid email address</span></span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 2: Business Details -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon purple">📦</div>
+        <div class="section-title">
+          Business Details
+          <span class="tamil" id="sec2Tamil">வணிக விவரங்கள்</span>
+        </div>
+      </div>
+      <div class="field-grid">
+
+        <div class="field">
+          <label for="products">
+            <span id="lbl_products">Products / Services Offered</span>
+            <span class="required-star">*</span>
+          </label>
+          <textarea id="products" placeholder="e.g. Cakes, Bread, Snacks — Delivery and Pickup available" required></textarea>
+          <span class="error-msg" id="err_products">⚠ <span id="errtxt_products">Please describe your products or services</span></span>
+        </div>
+
+        <div class="field">
+          <label for="targetCustomers">
+            <span id="lbl_targetCustomers">Target Customers</span>
+            <span class="optional-tag" id="optTag2">Optional</span>
+          </label>
+          <input type="text" id="targetCustomers" placeholder="e.g. Local families, College students, Corporates">
+        </div>
+
+        <div class="field">
+          <label><span id="lbl_hasWebsite">Do you have an existing website?</span></label>
+          <div class="radio-group">
+            <div class="radio-chip">
+              <input type="radio" name="hasWebsite" id="websiteNo" value="No" checked>
+              <label for="websiteNo" id="lbl_websiteNo">❌ No</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="hasWebsite" id="websiteYes" value="Yes">
+              <label for="websiteYes" id="lbl_websiteYes">✅ Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field" id="existingUrlField" style="display:none;">
+          <label for="existingUrl"><span id="lbl_existingUrl">Existing Website URL</span></label>
+          <input type="url" id="existingUrl" placeholder="https://yourwebsite.com">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 3: Website Requirements -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon green">🎯</div>
+        <div class="section-title">
+          Website Requirements
+          <span class="tamil" id="sec3Tamil">இணையதள தேவைகள்</span>
+        </div>
+      </div>
+      <div class="field-grid">
+
+        <div class="field">
+          <label>
+            <span id="lbl_websiteType">Website Type</span>
+            <span class="required-star">*</span>
+          </label>
+          <div class="radio-group">
+            <div class="radio-chip">
+              <input type="radio" name="websiteType" id="wt_business" value="Business Website" required>
+              <label for="wt_business" id="lbl_wt_business">🏛 Business</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="websiteType" id="wt_ecom" value="E-Commerce">
+              <label for="wt_ecom" id="lbl_wt_ecom">🛒 E-Commerce</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="websiteType" id="wt_portfolio" value="Portfolio">
+              <label for="wt_portfolio" id="lbl_wt_portfolio">🎨 Portfolio</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="websiteType" id="wt_landing" value="Landing Page">
+              <label for="wt_landing" id="lbl_wt_landing">📄 Landing Page</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="websiteType" id="wt_blog" value="Blog">
+              <label for="wt_blog" id="lbl_wt_blog">📝 Blog</label>
+            </div>
+          </div>
+          <span class="error-msg" id="err_websiteType">⚠ <span id="errtxt_websiteType">Please select a website type</span></span>
+        </div>
+
+        <div class="field">
+          <label for="numPages">
+            <span id="lbl_numPages">Number of Pages</span>
+            <span class="optional-tag" id="optTag3">Optional</span>
+          </label>
+          <select id="numPages">
+            <option value="" id="opt_pages0">Select...</option>
+            <option value="1-3" id="opt_pages1">1–3 Pages</option>
+            <option value="4-6" id="opt_pages2">4–6 Pages</option>
+            <option value="7-10" id="opt_pages3">7–10 Pages</option>
+            <option value="10+" id="opt_pages4">10+ Pages</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label><span id="lbl_features">Required Features</span> <span class="optional-tag" id="optTag4">Optional</span></label>
+          <div class="check-group">
+            <div class="check-chip"><input type="checkbox" id="feat_wa" value="WhatsApp Button"><label for="feat_wa">💬 WhatsApp</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_pay" value="Payment Gateway"><label for="feat_pay">💳 Payment</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_book" value="Booking System"><label for="feat_book">📅 Booking</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_gal" value="Photo Gallery"><label for="feat_gal">🖼 Gallery</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_map" value="Google Maps"><label for="feat_map">📍 Maps</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_contact" value="Contact Form"><label for="feat_contact">📋 Contact Form</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_seo" value="SEO Optimization"><label for="feat_seo">🔍 SEO</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_social" value="Social Media Links"><label for="feat_social">📱 Social Media</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_chat" value="Live Chat"><label for="feat_chat">💭 Live Chat</label></div>
+            <div class="check-chip"><input type="checkbox" id="feat_anim" value="Animations"><label for="feat_anim">✨ Animations</label></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="targetLang">
+            <span id="lbl_targetLang">Website Language</span>
+            <span class="optional-tag" id="optTag5">Optional</span>
+          </label>
+          <select id="targetLang">
+            <option value="">Select...</option>
+            <option value="English">English</option>
+            <option value="Tamil">Tamil</option>
+            <option value="English + Tamil">English + Tamil</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="deadline">
+            <span id="lbl_deadline">Expected Delivery</span>
+            <span class="optional-tag" id="optTag6">Optional</span>
+          </label>
+          <select id="deadline">
+            <option value="">Select...</option>
+            <option value="ASAP (1 week)">ASAP (1 week)</option>
+            <option value="2 weeks">2 Weeks</option>
+            <option value="1 month">1 Month</option>
+            <option value="Flexible">Flexible</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 4: Design Preferences -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon gold">🎨</div>
+        <div class="section-title">
+          Design Preferences
+          <span class="tamil" id="sec4Tamil">வடிவமைப்பு விருப்பங்கள்</span>
+        </div>
+      </div>
+      <div class="field-grid cols-2">
+
+        <div class="field">
+          <label><span id="lbl_hasLogo">Do you have a logo?</span></label>
+          <div class="radio-group">
+            <div class="radio-chip">
+              <input type="radio" name="hasLogo" id="logoNo" value="No" checked>
+              <label for="logoNo" id="lbl_logoNo">❌ No</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="hasLogo" id="logoYes" value="Yes">
+              <label for="logoYes" id="lbl_logoYes">✅ Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="colorPref">
+            <span id="lbl_colorPref">Color Preference</span>
+            <span class="optional-tag" id="optTag7">Optional</span>
+          </label>
+          <input type="text" id="colorPref" placeholder="e.g. Blue & White, Red & Gold">
+        </div>
+
+        <div class="field full">
+          <label for="refWebsite">
+            <span id="lbl_refWebsite">Reference Website</span>
+            <span class="optional-tag" id="optTag8">Optional</span>
+          </label>
+          <input type="url" id="refWebsite" placeholder="https://example.com">
+        </div>
+
+        <div class="field full">
+          <label for="designStyle">
+            <span id="lbl_designStyle">Design Style</span>
+            <span class="optional-tag" id="optTag9">Optional</span>
+          </label>
+          <div class="radio-group">
+            <div class="radio-chip"><input type="radio" name="designStyle" id="ds_modern" value="Modern & Clean"><label for="ds_modern" id="lbl_ds_modern">✨ Modern</label></div>
+            <div class="radio-chip"><input type="radio" name="designStyle" id="ds_classic" value="Classic & Professional"><label for="ds_classic" id="lbl_ds_classic">🏛 Classic</label></div>
+            <div class="radio-chip"><input type="radio" name="designStyle" id="ds_bold" value="Bold & Colorful"><label for="ds_bold" id="lbl_ds_bold">🌈 Bold</label></div>
+            <div class="radio-chip"><input type="radio" name="designStyle" id="ds_minimal" value="Minimal & Simple"><label for="ds_minimal" id="lbl_ds_minimal">⬜ Minimal</label></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 5: Service Level -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon teal">⚙️</div>
+        <div class="section-title">
+          Service Level
+          <span class="tamil" id="sec5Tamil">சேவை நிலை</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>
+          <span id="lbl_serviceLevel">Choose Your Plan</span>
+          <span class="required-star">*</span>
+        </label>
+        <div class="service-cards">
+          <div class="service-card-option">
+            <input type="radio" name="serviceLevel" id="sl_basic" value="Basic" required>
+            <label class="service-card-label" for="sl_basic">
+              <span class="service-emoji">🌱</span>
+              <span class="service-name" id="lbl_sl_basic">Basic</span>
+              <span class="service-tamil" id="sub_sl_basic">அடிப்படை</span>
+              <span class="service-badge badge-green">Starter</span>
+            </label>
+          </div>
+          <div class="service-card-option">
+            <input type="radio" name="serviceLevel" id="sl_premium" value="Premium">
+            <label class="service-card-label" for="sl_premium">
+              <span class="service-emoji">💎</span>
+              <span class="service-name" id="lbl_sl_premium">Premium</span>
+              <span class="service-tamil" id="sub_sl_premium">பிரீமியம்</span>
+              <span class="service-badge badge-blue">Popular</span>
+            </label>
+          </div>
+          <div class="service-card-option">
+            <input type="radio" name="serviceLevel" id="sl_ultra" value="Ultra Premium">
+            <label class="service-card-label" for="sl_ultra">
+              <span class="service-emoji">👑</span>
+              <span class="service-name" id="lbl_sl_ultra">Ultra Premium</span>
+              <span class="service-tamil" id="sub_sl_ultra">அல்ட்ரா பிரீமியம்</span>
+              <span class="service-badge badge-gold">Elite</span>
+            </label>
+          </div>
+        </div>
+        <span class="error-msg" id="err_serviceLevel">⚠ <span id="errtxt_serviceLevel">Please select a service plan</span></span>
+      </div>
+    </div>
+
+    <!-- SECTION 6: File Upload -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon pink">📁</div>
+        <div class="section-title">
+          Upload Images / Videos
+          <span class="tamil" id="sec6Tamil">புகைப்படங்கள் / வீடியோக்கள்</span>
+        </div>
+      </div>
+      <div class="field">
+        <label><span id="lbl_files">Attach Images or Videos</span> <span class="optional-tag" id="optTag10">Optional</span></label>
+        <div class="file-upload-area" id="uploadArea">
+          <input type="file" id="fileInput" multiple accept="image/*,video/*" onchange="handleFiles(this.files)">
+          <div class="upload-icon">📤</div>
+          <div class="upload-title" id="uploadTitle">Click or Drag & Drop Files</div>
+          <div class="upload-subtitle" id="uploadSubtitle">Supports <span>Images & Videos</span> — Multiple files allowed</div>
+        </div>
+        <div class="file-list" id="fileList"></div>
+        <div class="preview-grid" id="previewGrid"></div>
+      </div>
+    </div>
+
+    <!-- SECTION 7: Additional Notes -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon purple">➕</div>
+        <div class="section-title">
+          Additional Requirements
+          <span class="tamil" id="sec7Tamil">கூடுதல் விவரங்கள்</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="notes">
+          <span id="lbl_notes">Any other details, requests or questions?</span>
+          <span class="optional-tag" id="optTag11">Optional</span>
+        </label>
+        <textarea id="notes" style="min-height:110px;" placeholder="Tell us anything else that would help us build your dream website..."></textarea>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="submit-area">
+      <div class="submit-note" id="submitNote">🔒 Your information is safe and will only be used to build your website.</div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-whatsapp" onclick="submitForm('whatsapp')">
+          <span class="btn-icon">💬</span>
+          <span class="btn-text">
+            <span class="main" id="btnWaMain">Send via WhatsApp</span>
+            <span class="sub" id="btnWaSub">Instant response</span>
+          </span>
+        </button>
+        <button type="button" class="btn btn-email" onclick="submitForm('email')">
+          <span class="btn-icon">📧</span>
+          <span class="btn-text">
+            <span class="main" id="btnEmMain">Send via Email</span>
+            <span class="sub" id="btnEmSub"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="563e3235243337223924676e16313b373f3a7835393b">[email&#160;protected]</a></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+  </form>
+  </main>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span id="toastIcon">✅</span>
+  <span id="toastMsg">Submitted successfully!</span>
+</div>
+
+<script>
+
+// ===========================
+// LANGUAGE DATA
+// ===========================
+const lang = {
+  en: {
+    subtitle: "Expert web design in Madambakkam, Chennai — tell us about your business and we'll build the perfect website for you.",
+    caption: "Transforming Your Business into a Powerful Online Presence 🚀",
+    locateBtnText: "Detect",
+    progressLabel: (p) => `${p}% complete`,
+    sec1: "Business Information", sec1sub: "வணிக தகவல்கள்",
+    sec2: "Business Details", sec2sub: "வணிக விவரங்கள்",
+    sec3: "Website Requirements", sec3sub: "இணையதள தேவைகள்",
+    sec4: "Design Preferences", sec4sub: "வடிவமைப்பு விருப்பங்கள்",
+    sec5: "Service Level", sec5sub: "சேவை நிலை",
+    sec6: "Upload Images / Videos", sec6sub: "புகைப்படங்கள் / வீடியோக்கள்",
+    sec7: "Additional Requirements", sec7sub: "கூடுதல் விவரங்கள்",
+    lbl_bizName: "Business Name",
+    lbl_bizType: "Business Type",
+    lbl_location: "Location",
+    lbl_phone: "Phone Number",
+    lbl_email: "Email Address",
+    lbl_products: "Products / Services Offered",
+    lbl_targetCustomers: "Target Customers",
+    lbl_hasWebsite: "Do you have an existing website?",
+    lbl_websiteNo: "❌ No", lbl_websiteYes: "✅ Yes",
+    lbl_existingUrl: "Existing Website URL",
+    lbl_websiteType: "Website Type",
+    lbl_wt_business: "🏛 Business", lbl_wt_ecom: "🛒 E-Commerce",
+    lbl_wt_portfolio: "🎨 Portfolio", lbl_wt_landing: "📄 Landing Page", lbl_wt_blog: "📝 Blog",
+    lbl_numPages: "Number of Pages",
+    opt_pages0: "Select...", opt_pages1: "1–3 Pages", opt_pages2: "4–6 Pages", opt_pages3: "7–10 Pages", opt_pages4: "10+ Pages",
+    lbl_features: "Required Features",
+    lbl_targetLang: "Website Language",
+    lbl_deadline: "Expected Delivery",
+    lbl_hasLogo: "Do you have a logo?",
+    lbl_logoNo: "❌ No", lbl_logoYes: "✅ Yes",
+    lbl_colorPref: "Color Preference",
+    lbl_refWebsite: "Reference Website",
+    lbl_designStyle: "Design Style",
+    lbl_ds_modern: "✨ Modern", lbl_ds_classic: "🏛 Classic", lbl_ds_bold: "🌈 Bold", lbl_ds_minimal: "⬜ Minimal",
+    lbl_serviceLevel: "Choose Your Plan",
+    lbl_sl_basic: "Basic", sub_sl_basic: "அடிப்படை",
+    lbl_sl_premium: "Premium", sub_sl_premium: "பிரீமியம்",
+    lbl_sl_ultra: "Ultra Premium", sub_sl_ultra: "அல்ட்ரா பிரீமியம்",
+    lbl_files: "Attach Images or Videos",
+    uploadTitle: "Click or Drag & Drop Files",
+    uploadSubtitle: 'Supports <span>Images & Videos</span> — Multiple files allowed',
+    lbl_notes: "Any other details, requests or questions?",
+    optTag: "Optional",
+    err_bizName: "Business name is required",
+    err_bizType: "Business type is required",
+    err_phone: "Valid phone number is required",
+    err_email: "Enter a valid email address",
+    err_products: "Please describe your products or services",
+    err_websiteType: "Please select a website type",
+    err_serviceLevel: "Please select a service plan",
+    submitNote: "🔒 Your information is safe and will only be used to build your website.",
+    btnWaMain: "Send via WhatsApp", btnWaSub: "Instant response",
+    btnEmMain: "Send via Email", btnEmSub: "hdcreator18@gmail.com",
+    placeholder_bizName: "e.g. Sri Murugan Bakery",
+    placeholder_bizType: "e.g. Bakery, Tailoring, School",
+    placeholder_location: "Your city or area",
+    placeholder_phone: "e.g. +91 98765 43210",
+    placeholder_email: "e.g. business@email.com",
+    placeholder_products: "e.g. Cakes, Bread, Snacks — Delivery and Pickup available",
+    placeholder_targetCustomers: "e.g. Local families, College students, Corporates",
+    placeholder_colorPref: "e.g. Blue & White, Red & Gold",
+    placeholder_refWebsite: "https://example.com",
+    placeholder_notes: "Tell us anything else that would help us build your dream website...",
+    toastSuccess: "Opening... Your enquiry is ready!",
+    toastError: "Please fill all required fields correctly."
+  },
+  ta: {
+    subtitle: "உங்கள் வணிகம் பற்றி சொல்லுங்கள் — சிறந்த இணையதளம் உருவாக்குவோம்.",
+    caption: "உங்கள் வணிகத்தை வலுவான ஆன்லைன் உருவாக்கமாக மாற்றுகிறோம் 🚀",
+    locateBtnText: "கண்டறி",
+    progressLabel: (p) => `${p}% முடிந்தது`,
+    sec1: "வணிக தகவல்கள்", sec1sub: "Business Information",
+    sec2: "வணிக விவரங்கள்", sec2sub: "Business Details",
+    sec3: "இணையதள தேவைகள்", sec3sub: "Website Requirements",
+    sec4: "வடிவமைப்பு விருப்பங்கள்", sec4sub: "Design Preferences",
+    sec5: "சேவை நிலை", sec5sub: "Service Level",
+    sec6: "புகைப்படங்கள் / வீடியோக்கள்", sec6sub: "Upload Images / Videos",
+    sec7: "கூடுதல் விவரங்கள்", sec7sub: "Additional Requirements",
+    lbl_bizName: "வணிகத்தின் பெயர்",
+    lbl_bizType: "வணிக வகை",
+    lbl_location: "இடம்",
+    lbl_phone: "தொலைபேசி எண்",
+    lbl_email: "மின்னஞ்சல்",
+    lbl_products: "பொருட்கள் / சேவைகள்",
+    lbl_targetCustomers: "இலக்கு வாடிக்கையாளர்கள்",
+    lbl_hasWebsite: "ஏற்கனவே இணையதளம் உள்ளதா?",
+    lbl_websiteNo: "❌ இல்லை", lbl_websiteYes: "✅ ஆமாம்",
+    lbl_existingUrl: "தற்போதைய இணையதள URL",
+    lbl_websiteType: "இணையதள வகை",
+    lbl_wt_business: "🏛 வணிகம்", lbl_wt_ecom: "🛒 E-Commerce",
+    lbl_wt_portfolio: "🎨 Portfolio", lbl_wt_landing: "📄 Landing Page", lbl_wt_blog: "📝 Blog",
+    lbl_numPages: "பக்கங்களின் எண்ணிக்கை",
+    opt_pages0: "தேர்வு செய்க...", opt_pages1: "1–3 பக்கங்கள்", opt_pages2: "4–6 பக்கங்கள்", opt_pages3: "7–10 பக்கங்கள்", opt_pages4: "10+ பக்கங்கள்",
+    lbl_features: "தேவையான அம்சங்கள்",
+    lbl_targetLang: "இணையதள மொழி",
+    lbl_deadline: "எதிர்பார்த்த தேதி",
+    lbl_hasLogo: "லோகோ உள்ளதா?",
+    lbl_logoNo: "❌ இல்லை", lbl_logoYes: "✅ ஆமாம்",
+    lbl_colorPref: "நிற விருப்பம்",
+    lbl_refWebsite: "உதாரண இணையதளம்",
+    lbl_designStyle: "வடிவமைப்பு பாணி",
+    lbl_ds_modern: "✨ நவீனம்", lbl_ds_classic: "🏛 கிளாசிக்", lbl_ds_bold: "🌈 துணிச்சல்", lbl_ds_minimal: "⬜ எளிமை",
+    lbl_serviceLevel: "திட்டம் தேர்வு செய்க",
+    lbl_sl_basic: "அடிப்படை", sub_sl_basic: "Basic",
+    lbl_sl_premium: "பிரீமியம்", sub_sl_premium: "Premium",
+    lbl_sl_ultra: "அல்ட்ரா பிரீமியம்", sub_sl_ultra: "Ultra Premium",
+    lbl_files: "படங்கள் அல்லது வீடியோக்கள் இணைக்கவும்",
+    uploadTitle: "கிளிக் செய்யுங்கள் அல்லது இங்கே இழுத்து விடுங்கள்",
+    uploadSubtitle: '<span>படங்கள் & வீடியோக்கள்</span> — பல கோப்புகள் சேர்க்கலாம்',
+    lbl_notes: "மேலும் விவரங்கள், கோரிக்கைகள் அல்லது கேள்விகள்?",
+    optTag: "விருப்பம்",
+    err_bizName: "வணிகத்தின் பெயர் தேவை",
+    err_bizType: "வணிக வகை தேவை",
+    err_phone: "சரியான தொலைபேசி எண் தேவை",
+    err_email: "சரியான மின்னஞ்சல் முகவரி உள்ளிடவும்",
+    err_products: "பொருட்கள் / சேவைகள் விவரிக்கவும்",
+    err_websiteType: "இணையதள வகையை தேர்வு செய்க",
+    err_serviceLevel: "திட்டத்தை தேர்வு செய்க",
+    submitNote: "🔒 உங்கள் தகவல் பாதுகாப்பாக இருக்கும். இணையதள உருவாக்கத்திற்கு மட்டுமே பயன்படுத்தப்படும்.",
+    btnWaMain: "WhatsApp மூலம் அனுப்பு", btnWaSub: "உடனடி பதில்",
+    btnEmMain: "மின்னஞ்சல் மூலம் அனுப்பு", btnEmSub: "hdcreator18@gmail.com",
+    placeholder_bizName: "எ.கா. ஸ்ரீ முருகன் பேக்கரி",
+    placeholder_bizType: "எ.கா. பேக்கரி, தையல், பள்ளி",
+    placeholder_location: "உங்கள் நகரம் அல்லது பகுதி",
+    placeholder_phone: "எ.கா. +91 98765 43210",
+    placeholder_email: "எ.கா. business@email.com",
+    placeholder_products: "எ.கா. கேக், ரொட்டி, சிறுதீனி — டெலிவரி மற்றும் கடை வருகை",
+    placeholder_targetCustomers: "எ.கா. உள்ளூர் குடும்பங்கள், கல்லூரி மாணவர்கள்",
+    placeholder_colorPref: "எ.கா. நீலம் & வெள்ளை, சிவப்பு & தங்கம்",
+    placeholder_refWebsite: "https://example.com",
+    placeholder_notes: "உங்கள் கனவு இணையதளத்திற்கு தேவையான விஷயங்களை சொல்லுங்கள்...",
+    toastSuccess: "திறக்கிறது... உங்கள் விசாரணை தயாராக உள்ளது!",
+    toastError: "தேவையான அனைத்து தகவல்களையும் சரியாக நிரப்பவும்."
+  }
+};
+
+let currentLang = 'en';
+let uploadedFiles = [];
+
+// ===========================
+// LANGUAGE SWITCH
+// ===========================
+function setLang(l) {
+  currentLang = l;
+  document.body.classList.toggle('tamil-mode', l === 'ta');
+  document.getElementById('btnEn').classList.toggle('active', l === 'en');
+  document.getElementById('btnTa').classList.toggle('active', l === 'ta');
+
+  const d = lang[l];
+  document.getElementById('headerCaption').textContent = d.caption;
+  document.getElementById('headerSubtitle').textContent = d.subtitle;
+  document.getElementById('locateBtnText').textContent = d.locateBtnText;
+  document.getElementById('submitNote').textContent = d.submitNote;
+  document.getElementById('btnWaMain').textContent = d.btnWaMain;
+  document.getElementById('btnWaSub').textContent = d.btnWaSub;
+  document.getElementById('btnEmMain').textContent = d.btnEmMain;
+  document.getElementById('uploadTitle').textContent = d.uploadTitle;
+  document.getElementById('uploadSubtitle').innerHTML = d.uploadSubtitle;
+
+  const keys = [
+    'lbl_bizName','lbl_bizType','lbl_location','lbl_phone','lbl_email',
+    'lbl_products','lbl_targetCustomers','lbl_hasWebsite','lbl_websiteNo','lbl_websiteYes',
+    'lbl_existingUrl','lbl_websiteType','lbl_wt_business','lbl_wt_ecom','lbl_wt_portfolio',
+    'lbl_wt_landing','lbl_wt_blog','lbl_numPages','lbl_features','lbl_targetLang','lbl_deadline',
+    'lbl_hasLogo','lbl_logoNo','lbl_logoYes','lbl_colorPref','lbl_refWebsite','lbl_designStyle',
+    'lbl_ds_modern','lbl_ds_classic','lbl_ds_bold','lbl_ds_minimal','lbl_serviceLevel',
+    'lbl_sl_basic','sub_sl_basic','lbl_sl_premium','sub_sl_premium','lbl_sl_ultra','sub_sl_ultra',
+    'lbl_files','lbl_notes'
+  ];
+  keys.forEach(k => { const el = document.getElementById(k); if(el && d[k]) el.textContent = d[k]; });
+
+  // Section titles
+  ['sec1','sec2','sec3','sec4','sec5','sec6','sec7'].forEach(s => {
+    const el1 = document.getElementById(s+'Tamil');
+    if(el1) { el1.previousSibling && (el1.closest('.section-title').childNodes[0].textContent = d[s] + ' '); el1.textContent = d[s+'sub']; }
+  });
+
+  // Placeholders
+  const pMap = {
+    bizName: 'placeholder_bizName', bizType: 'placeholder_bizType',
+    location: 'placeholder_location', phone: 'placeholder_phone',
+    email: 'placeholder_email', products: 'placeholder_products',
+    targetCustomers: 'placeholder_targetCustomers', colorPref: 'placeholder_colorPref',
+    refWebsite: 'placeholder_refWebsite', notes: 'placeholder_notes'
+  };
+  Object.entries(pMap).forEach(([id, key]) => {
+    const el = document.getElementById(id);
+    if(el && d[key]) el.placeholder = d[key];
+  });
+
+  // Select options
+  ['opt_pages0','opt_pages1','opt_pages2','opt_pages3','opt_pages4'].forEach(k => {
+    const el = document.getElementById(k); if(el && d[k]) el.textContent = d[k];
+  });
+
+  // Optional tags
+  ['optTag1','optTag2','optTag3','optTag4','optTag5','optTag6','optTag7','optTag8','optTag9','optTag10','optTag11'].forEach(id => {
+    const el = document.getElementById(id); if(el) el.textContent = d.optTag;
+  });
+
+  // Error texts
+  const errMap = {
+    errtxt_bizName: 'err_bizName', errtxt_bizType: 'err_bizType',
+    errtxt_phone: 'err_phone', errtxt_email: 'err_email',
+    errtxt_products: 'err_products', errtxt_websiteType: 'err_websiteType',
+    errtxt_serviceLevel: 'err_serviceLevel'
+  };
+  Object.entries(errMap).forEach(([id, key]) => {
+    const el = document.getElementById(id); if(el && d[key]) el.textContent = d[key];
+  });
+
+  updateProgress();
+}
+
+// ===========================
+// LIVE LOCATION DETECTION
+// ===========================
+function detectLocation() {
+  if (!navigator.geolocation) return;
+  const btn = document.getElementById('locateBtn');
+  const input = document.getElementById('location');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const lat = pos.coords.latitude;
+      const lon = pos.coords.longitude;
+      fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`)
+        .then(r => r.json())
+        .then(data => {
+          const addr = data.address || {};
+          const parts = [
+            addr.suburb || addr.neighbourhood || addr.village || addr.town,
+            addr.city || addr.county,
+            addr.state
+          ].filter(Boolean);
+          if (parts.length) input.value = parts.slice(0, 2).join(', ');
+        })
+        .catch(() => {
+          input.value = `${lat.toFixed(4)}, ${lon.toFixed(4)}`;
+        })
+        .finally(() => { btn.disabled = false; btn.style.opacity = ''; });
+    },
+    () => { btn.disabled = false; btn.style.opacity = ''; }
+  );
+}
+
+// ===========================
+// PROGRESS
+// ===========================
+function updateProgress() {
+  const required = ['bizName','bizType','phone'];
+  const radioRequired = [
+    document.querySelector('input[name="websiteType"]:checked'),
+    document.querySelector('input[name="serviceLevel"]:checked')
+  ];
+  let filled = 0;
+  const total = required.length + 2;
+  required.forEach(id => { if(document.getElementById(id)?.value.trim()) filled++; });
+  radioRequired.forEach(r => { if(r) filled++; });
+  const pct = Math.round((filled / total) * 100);
+  document.getElementById('progressBar').style.width = pct + '%';
+  const d = lang[currentLang];
+  document.getElementById('progressLabel').textContent = d.progressLabel(pct);
+}
+
+// ===========================
+// EXISTING WEBSITE TOGGLE
+// ===========================
+document.querySelectorAll('input[name="hasWebsite"]').forEach(r => {
+  r.addEventListener('change', () => {
+    document.getElementById('existingUrlField').style.display = r.value === 'Yes' ? 'block' : 'none';
+  });
+});
+
+// ===========================
+// FILE UPLOAD
+// ===========================
+const uploadArea = document.getElementById('uploadArea');
+
+uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
+uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+uploadArea.addEventListener('drop', e => {
+  e.preventDefault();
+  uploadArea.classList.remove('drag-over');
+  handleFiles(e.dataTransfer.files);
+});
+
+function handleFiles(files) {
+  Array.from(files).forEach(file => {
+    if(!uploadedFiles.find(f => f.name === file.name && f.size === file.size)) {
+      uploadedFiles.push(file);
+    }
+  });
+  renderFileList();
+}
+
+function renderFileList() {
+  const list = document.getElementById('fileList');
+  const grid = document.getElementById('previewGrid');
+  list.innerHTML = '';
+  grid.innerHTML = '';
+
+  uploadedFiles.forEach((file, i) => {
+    const isImage = file.type.startsWith('image/');
+    const isVideo = file.type.startsWith('video/');
+    const size = (file.size / 1024).toFixed(1) + ' KB';
+    const icon = isImage ? '🖼' : isVideo ? '🎬' : '📄';
+
+    const item = document.createElement('div');
+    item.className = 'file-item';
+    item.innerHTML = `
+      <span class="file-item-icon">${icon}</span>
+      <div class="file-item-info">
+        <div class="file-item-name">${file.name}</div>
+        <div class="file-item-size">${size}</div>
+      </div>
+      <button class="file-remove" onclick="removeFile(${i})" title="Remove">✕</button>
+    `;
+    list.appendChild(item);
+
+    if(isImage) {
+      const prev = document.createElement('div');
+      prev.className = 'preview-item';
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      prev.appendChild(img);
+      grid.appendChild(prev);
+    } else if(isVideo) {
+      const prev = document.createElement('div');
+      prev.className = 'preview-item';
+      prev.innerHTML = '<div class="video-thumb">🎬</div>';
+      grid.appendChild(prev);
+    }
+  });
+}
+
+function removeFile(i) {
+  uploadedFiles.splice(i, 1);
+  renderFileList();
+}
+
+// ===========================
+// VALIDATION
+// ===========================
+function showError(id, show) {
+  const el = document.getElementById(id);
+  const input = document.getElementById(id.replace('err_',''));
+  if(el) el.classList.toggle('show', show);
+  if(input) input.classList.toggle('error', show);
+}
+
+function validate() {
+  let valid = true;
+  const d = lang[currentLang];
+
+  const bizName = document.getElementById('bizName').value.trim();
+  if(!bizName) { showError('err_bizName', true); valid = false; } else showError('err_bizName', false);
+
+  const bizType = document.getElementById('bizType').value.trim();
+  if(!bizType) { showError('err_bizType', true); valid = false; } else showError('err_bizType', false);
+
+  const phone = document.getElementById('phone').value.trim();
+  if(!phone || !/^[\d\s\+\-\(\)]{7,15}$/.test(phone)) { showError('err_phone', true); valid = false; } else showError('err_phone', false);
+
+  const email = document.getElementById('email').value.trim();
+  if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('err_email', true); valid = false; } else showError('err_email', false);
+
+  const products = document.getElementById('products').value.trim();
+  if(!products) { showError('err_products', true); valid = false; } else showError('err_products', false);
+
+  const wsType = document.querySelector('input[name="websiteType"]:checked');
+  const wsErr = document.getElementById('err_websiteType');
+  if(!wsType) { wsErr.classList.add('show'); valid = false; } else wsErr.classList.remove('show');
+
+  const sl = document.querySelector('input[name="serviceLevel"]:checked');
+  const slErr = document.getElementById('err_serviceLevel');
+  if(!sl) { slErr.classList.add('show'); valid = false; } else slErr.classList.remove('show');
+
+  return valid;
+}
+
+// ===========================
+// BUILD MESSAGE
+// ===========================
+function buildMessage() {
+  const g = id => document.getElementById(id)?.value || '';
+  const gr = name => document.querySelector(`input[name="${name}"]:checked`)?.value || 'Not selected';
+  const gc = () => Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(c => c.value).join(', ') || 'None';
+
+  const hasFiles = uploadedFiles.length > 0;
+  const fileNote = hasFiles ? `\n📎 Files Attached: ${uploadedFiles.length} file(s) — ${uploadedFiles.map(f=>f.name).join(', ')}` : '';
+
+  return `🌐 *Website Creation Requirement*
+━━━━━━━━━━━━━━━━━━━━━━
+
+🏢 *BUSINESS INFO*
+• Name: ${g('bizName')}
+• Type: ${g('bizType')}
+• Location: ${g('location')}
+• Phone: ${g('phone')}
+• Email: ${g('email') || 'Not provided'}
+
+📦 *BUSINESS DETAILS*
+• Products/Services: ${g('products')}
+• Target Customers: ${g('targetCustomers') || 'Not specified'}
+• Existing Website: ${gr('hasWebsite')}${gr('hasWebsite') === 'Yes' ? ` (${g('existingUrl') || 'URL not given'})` : ''}
+
+🎯 *WEBSITE REQUIREMENTS*
+• Website Type: ${gr('websiteType')}
+• Number of Pages: ${g('numPages') || 'Not specified'}
+• Required Features: ${gc()}
+• Website Language: ${g('targetLang') || 'Not specified'}
+• Expected Delivery: ${g('deadline') || 'Flexible'}
+
+🎨 *DESIGN PREFERENCES*
+• Has Logo: ${gr('hasLogo')}
+• Color Preference: ${g('colorPref') || 'Not specified'}
+• Reference Website: ${g('refWebsite') || 'Not specified'}
+• Design Style: ${gr('designStyle') || 'Not specified'}
+
+⚙️ *SERVICE LEVEL*
+• Plan Selected: ${gr('serviceLevel')}
+
+📝 *ADDITIONAL NOTES*
+${g('notes') || 'No additional notes.'}
+${fileNote}
+━━━━━━━━━━━━━━━━━━━━━━
+Sent via HD Creator Enquiry Form`;
+}
+
+// ===========================
+// SUBMIT
+// ===========================
+function submitForm(method) {
+  if(!validate()) {
+    showToast(lang[currentLang].toastError, 'error');
+    // Scroll to first error
+    const firstErr = document.querySelector('.error-msg.show');
+    if(firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  const message = buildMessage();
+  const hasFiles = uploadedFiles.length > 0;
+
+  if(method === 'whatsapp') {
+    const encoded = encodeURIComponent(message);
+    window.open(`https://wa.me/917358494779?text=${encoded}`, '_blank');
+    setTimeout(() => {
+      window.open(`https://wa.me/919003160167?text=${encoded}`, '_blank');
+    }, 800);
+    if(hasFiles) {
+      setTimeout(() => {
+        alert(currentLang === 'ta'
+          ? 'WhatsApp திறக்கும் போது, "Customer attached images/videos" என்று குறிப்பிட்டுள்ளோம். தயவுசெய்து கோப்புகளை WhatsApp-ல் நேரடியாக அனுப்பவும்.'
+          : 'WhatsApp is opening. Since files cannot be sent automatically, please manually attach your images/videos in the WhatsApp chat.');
+      }, 1800);
+    }
+  } else {
+    const subject = encodeURIComponent('Website Creation Requirement - HD Creator');
+    const body = encodeURIComponent(message + (hasFiles ? '\n\n[Please attach your files to this email]' : ''));
+    window.open(`mailto:hdcreator18@gmail.com?subject=${subject}&body=${body}`, '_blank');
+  }
+
+  showToast(lang[currentLang].toastSuccess, 'success');
+}
+
+// ===========================
+// TOAST
+// ===========================
+function showToast(msg, type = 'success') {
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  document.getElementById('toastIcon').textContent = type === 'success' ? '✅' : '⚠️';
+  t.className = `toast ${type}`;
+  setTimeout(() => t.classList.add('show'), 10);
+  setTimeout(() => t.classList.remove('show'), 4000);
+}
+
+// ===========================
+// EXPOSE GLOBALS (fixes ReferenceError)
+// ===========================
+window.setLang      = setLang;
+window.submitForm   = submitForm;
+window.detectLocation = detectLocation;
+window.removeFile   = removeFile;
+window.handleFiles  = handleFiles;
+
+// ===========================
+// LIVE PROGRESS TRACKING
+// ===========================
+document.querySelectorAll('input, select, textarea').forEach(el => {
+  el.addEventListener('input', updateProgress);
+  el.addEventListener('change', updateProgress);
+});
+
+updateProgress();
+</script>
+</body>
+</html>
