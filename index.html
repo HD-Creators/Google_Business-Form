@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
-  <head>
-    <meta name="google-site-verification" content="sBALs2K6D8ts5qGynKty5ks7EHDIxSDoMcUa4ceSBiA" />
-  </head>
-  
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -833,6 +829,103 @@
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 100px; }
+  /* Plan Feature Details */
+  .plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  @media (max-width: 700px) {
+    .plan-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (min-width: 701px) and (max-width: 900px) {
+    .plan-grid { grid-template-columns: 1fr 1fr; }
+    .plan-detail-card:nth-child(3) { grid-column: 1 / -1; }
+  }
+
+  .plan-detail-card {
+    border-radius: 14px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.03);
+    padding: 18px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  }
+
+  .plan-detail-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .plan-basic  { border-color: rgba(104,211,145,0.2); }
+  .plan-basic:hover  { border-color: rgba(104,211,145,0.45); box-shadow: 0 6px 28px rgba(104,211,145,0.12); }
+
+  .plan-premium { border-color: rgba(99,179,237,0.25); background: rgba(99,179,237,0.04); }
+  .plan-premium:hover { border-color: rgba(99,179,237,0.5); box-shadow: 0 6px 28px rgba(99,179,237,0.15); }
+
+  .plan-ultra  { border-color: rgba(246,201,14,0.25); background: rgba(246,201,14,0.03); }
+  .plan-ultra:hover  { border-color: rgba(246,201,14,0.5); box-shadow: 0 6px 28px rgba(246,201,14,0.14); }
+
+  .plan-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .plan-detail-emoji {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .plan-detail-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .plan-detail-sub {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .plan-feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .plan-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+
+  .plan-basic  .plan-feature-list li { color: rgba(232,234,240,0.8); }
+  .plan-premium .plan-feature-list li { color: rgba(232,234,240,0.88); }
+  .plan-ultra  .plan-feature-list li { color: var(--text); }
+
+  .pf-icon {
+    font-size: 13px;
+    line-height: 1.45;
+    flex-shrink: 0;
+    width: 18px;
+    text-align: center;
+  }
+
 </style>
 </head>
 <body>
@@ -1182,6 +1275,87 @@
           </div>
         </div>
         <span class="error-msg" id="err_serviceLevel">⚠ <span id="errtxt_serviceLevel">Please select a service plan</span></span>
+      </div>
+    </div>
+
+    <!-- PLAN FEATURES DETAIL -->
+    <div class="section-card plan-features-section">
+      <div class="section-header">
+        <div class="section-icon gold">📋</div>
+        <div class="section-title">
+          What's Included in Each Plan
+          <span class="tamil">ஒவ்வொரு திட்டத்திலும் என்ன உள்ளது</span>
+        </div>
+      </div>
+
+      <div class="plan-grid">
+
+        <!-- BASIC -->
+        <div class="plan-detail-card plan-basic">
+          <div class="plan-detail-header">
+            <span class="plan-detail-emoji">🌱</span>
+            <div>
+              <div class="plan-detail-name">Basic</div>
+              <div class="plan-detail-sub">அடிப்படை &nbsp;·&nbsp; Starter</div>
+            </div>
+            <span class="service-badge badge-green" style="margin-left:auto">Starter</span>
+          </div>
+          <ul class="plan-feature-list">
+            <li><span class="pf-icon">📄</span>1–3 Pages Website</li>
+            <li><span class="pf-icon">📱</span>Mobile Responsive Design</li>
+            <li><span class="pf-icon">🎨</span>Basic UI Design</li>
+            <li><span class="pf-icon">💬</span>Contact Form + WhatsApp Integration</li>
+            <li><span class="pf-icon">🔍</span>Basic SEO Setup</li>
+            <li><span class="pf-icon">⚡</span>Fast Loading Website</li>
+          </ul>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="plan-detail-card plan-premium">
+          <div class="plan-detail-header">
+            <span class="plan-detail-emoji">💎</span>
+            <div>
+              <div class="plan-detail-name">Premium</div>
+              <div class="plan-detail-sub">பிரீமியம் &nbsp;·&nbsp; Popular</div>
+            </div>
+            <span class="service-badge badge-blue" style="margin-left:auto">Popular</span>
+          </div>
+          <ul class="plan-feature-list">
+            <li><span class="pf-icon">📄</span>5–8 Pages Website</li>
+            <li><span class="pf-icon">✨</span>Advanced UI/UX Design</li>
+            <li><span class="pf-icon">📱</span>Mobile + Tablet Optimized</li>
+            <li><span class="pf-icon">💬</span>WhatsApp + Email Integration</li>
+            <li><span class="pf-icon">🖼</span>Image / Content Optimization</li>
+            <li><span class="pf-icon">🔍</span>On-page SEO Optimization</li>
+            <li><span class="pf-icon">📈</span>Google Indexing Setup</li>
+            <li><span class="pf-icon">🎬</span>Basic Animations &amp; Effects</li>
+          </ul>
+        </div>
+
+        <!-- ULTRA PREMIUM -->
+        <div class="plan-detail-card plan-ultra">
+          <div class="plan-detail-header">
+            <span class="plan-detail-emoji">👑</span>
+            <div>
+              <div class="plan-detail-name">Ultra Premium</div>
+              <div class="plan-detail-sub">அல்ட்ரா பிரீமியம் &nbsp;·&nbsp; Elite</div>
+            </div>
+            <span class="service-badge badge-gold" style="margin-left:auto">Elite</span>
+          </div>
+          <ul class="plan-feature-list">
+            <li><span class="pf-icon">📄</span>10+ Pages or Dynamic Website</li>
+            <li><span class="pf-icon">🎨</span>Custom UI/UX with Modern Design</li>
+            <li><span class="pf-icon">📱</span>Fully Responsive (All Devices)</li>
+            <li><span class="pf-icon">✨</span>Advanced Animations &amp; Interactive Elements</li>
+            <li><span class="pf-icon">💬</span>WhatsApp + Email + Call Integration</li>
+            <li><span class="pf-icon">🔍</span>Advanced SEO Optimization</li>
+            <li><span class="pf-icon">📈</span>Google Ranking Optimization Setup</li>
+            <li><span class="pf-icon">⚡</span>Speed Optimization (High Performance)</li>
+            <li><span class="pf-icon">🛠</span>Admin Panel / CMS (if required)</li>
+            <li><span class="pf-icon">🛒</span>E-commerce or Custom Features (if needed)</li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
@@ -1712,9 +1886,9 @@ function submitForm(method) {
 
   if(method === 'whatsapp') {
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/917358494779?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/919003160167?text=${encoded}`, '_blank');
     setTimeout(() => {
-      window.open(`https://wa.me/919003160167?text=${encoded}`, '_blank');
+      window.open(`https://wa.me/917359494779?text=${encoded}`, '_blank');
     }, 800);
     if(hasFiles) {
       setTimeout(() => {
